@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock x:Name="visszaszamlalo" FontSize="16" TextAlignment="Center" Margin="10"/>
+        <TextBlock Text="10" x:Name="visszaszamlalo" FontSize="16" TextAlignment="Center" Margin="10"/>
         <Button x:Name="kattintoButton" Click="ClickCounterButton" Content="Kattints!" Margin="10" Visibility="Collapsed"/>
         <Button x:Name="startbutton" Content="Start" Click="ClickStartButton" Margin="10"/>
         <TextBlock Text="Kattintások száma:" x:Name="pontszamlalo" Margin="10"/>

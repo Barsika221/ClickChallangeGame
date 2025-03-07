@@ -18,6 +18,7 @@ namespace ClickChallangeGame;
 public partial class MainWindow : Window
 {
     private int time = 10;
+    private int count = 0;
     private DispatcherTimer Timer;
     public MainWindow()
     {
@@ -35,22 +36,22 @@ public partial class MainWindow : Window
         {
             Timer.Stop();
             MessageBox.Show("Lejárt az idő");
+            count = 0;
             kattintoButton.Visibility = Visibility.Collapsed;
             startbutton.Visibility = Visibility.Visible;
         }
     }
     private void ClickCounterButton(object sender, RoutedEventArgs e)
     {
-        int counter = int.Parse(pontszamlalo.Text);
-        counter++;
-        pontszamlalo.Text = counter.ToString();
+        count++;
+        pontszamlalo.Text ="Kattintások száma: " + count.ToString();
     }
 
     private void ClickStartButton(object sender, RoutedEventArgs e)
     {
         time = 10;
         Timer.Start();
-        pontszamlalo.Text = "0";
+        pontszamlalo.Text = "Kattintások száma: 0";
         kattintoButton.Visibility = Visibility.Visible;
         startbutton.Visibility = Visibility.Collapsed;
     }
